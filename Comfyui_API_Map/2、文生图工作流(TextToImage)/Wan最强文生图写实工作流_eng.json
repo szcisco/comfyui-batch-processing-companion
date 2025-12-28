@@ -1,0 +1,293 @@
+{
+  "3": {
+    "inputs": {
+      "text": [
+        "76",
+        0
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 720,
+      "height": 1280,
+      "length": 1,
+      "batch_size": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（混元）"
+    }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "14": {
+    "inputs": {
+      "lora_name": "wan2.1\\WAN2.1_SmartphoneSnapshotPhotoReality_v1_by-AI_Characters.safetensors",
+      "strength_model": 1.0000000000000002,
+      "strength_clip": 1.0000000000000002,
+      "model": [
+        "29",
+        0
+      ],
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "29": {
+    "inputs": {
+      "lora_name": "Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.safetensors",
+      "strength_model": 0.4000000000000001,
+      "strength_clip": 0.4000000000000001,
+      "model": [
+        "30",
+        0
+      ],
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "30": {
+    "inputs": {
+      "lora_name": "wan2.1\\Wan2.1_T2V_14B_FusionX_LoRA.safetensors",
+      "strength_model": 0.4000000000000001,
+      "strength_clip": 0.4000000000000001,
+      "model": [
+        "42",
+        0
+      ],
+      "clip": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "34": {
+    "inputs": {
+      "seed": 385492300671594,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "res_2s",
+      "scheduler": "bong_tangent",
+      "denoise": 1,
+      "model": [
+        "43",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "40": {
+    "inputs": {
+      "clip_name": "wan2.1\\umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "42": {
+    "inputs": {
+      "unet_name": "Wan2_1-T2V-14B_fp8_e4m3fn.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "43": {
+    "inputs": {
+      "use_zero_init": true,
+      "zero_init_steps": 0,
+      "model": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "CFGZeroStarAndInit",
+    "_meta": {
+      "title": "CFG Zero Star/Init"
+    }
+  },
+  "47": {
+    "inputs": {
+      "anything": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "76": {
+    "inputs": {
+      "separator": "",
+      "text1": [
+        "77",
+        0
+      ],
+      "text2": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "🔤 CR Text Concatenate"
+    }
+  },
+  "77": {
+    "inputs": {
+      "value": "2010 年代初期用手机拍摄并上传到 Facebook 的快照照片，具有动态自然光和中性白平衡和褪色颜色,摄影，超真实的皮肤纹理",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "78": {
+    "inputs": {
+      "value": "画面中有一位中国美女，皮肤白皙、胸部很大的，双马尾麻花辫的年轻中国女性，在海中的一艘游艇上自拍，看头镜头。她穿着粉色吊带上衣、白色蕾丝裙和白色运动鞋。自然光从柔和的照入，杰作，高画质，丰富细节。",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "79": {
+    "inputs": {
+      "sage_attention": "auto",
+      "model": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "< Sage Attention"
+    }
+  },
+  "80": {
+    "inputs": {
+      "upscale": -1,
+      "tile": false,
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 64,
+      "samples": [
+        "34",
+        0
+      ],
+      "vae": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "VAEUtils_VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (VAE Utils)"
+    }
+  },
+  "81": {
+    "inputs": {
+      "vae_name": "Wan2.1_VAE_upscale2x_imageonly_real_v1.safetensors"
+    },
+    "class_type": "VAEUtils_CustomVAELoader",
+    "_meta": {
+      "title": "Load VAE (VAE Utils)"
+    }
+  }
+}

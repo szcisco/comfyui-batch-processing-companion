@@ -1,0 +1,36 @@
+温馨提示
+面向非编程用户：
+请勿修改本文件夹内的 .json 和 .ini 配置文件，错误修改会导致程序无法正常运行。
+
+面向编程开发者：
+您可对上述文件进行自定义修改，但需严格遵循以下规则：
+1. 当修改 API 文件的加载配置（load）或新增模型后，需重新导出 API 文件并放置于当前目录，再基于更新后的 API 文件生成对应的 .ini 配置文件，确保程序能正确识别修改内容。
+2. 若修改了关键参数，必须同步更新对应的插件编号（如 node #97），否则程序会因无法识别插件 ID 而报错。
+
+新工作流适配方式
+若需适配新的 ComfyUI 工作流，可通过以下三种方式实现：
+1. 等待官方更新：关注项目版本迭代，作者会在后续版本中逐步适配主流工作流。
+2. 申请免费定制更新：联系作者说明需求，作者将在时间允许的情况下免费完成适配。
+3. 付费定制开发：若需优先适配或个性化定制工作流，可联系作者协商有偿定制服务。
+
+
+
+------------------------------------------------
+
+
+
+Warm Reminder
+For Non-Programmers:
+Do not modify the .json and .ini confiquration files in this folder, incorrect modifications will cause theprogram to malfunction.
+
+For Programmers/Developers:
+You can customize the above files, but must strictly follow these rules:
+1. When modifying the APl file's load configuration or adding new models, you must re-export the APl file andplace it in the current directory, then generate the corresponding .ini configuration file based on theupdated APl file. This ensures the program can correctly recognize the changes.
+2. lf you modify key parameters, you must synchronously update the corresponding plugin IDs (such as node#97 ). Otherwise, the program will fail to recognize the modified plugin lDs and throw an error.
+
+Methods for Adapting to New Workflows
+If you need to adapt to new ComfyUl workflows, you can choose from the following three options.
+1. Wait for Official Updates: Follow the project's version iterations. The author wil gradually support
+mainstream workflows in subsequent versions.
+2. Request Free Custom Updates: Contact the author to explain your requirements, The author will completethe adaptation for free when time permits.
+3. Paid Custom Development: lf you need priority adaptation or personalized workflow customization, youcan contact the author to negotiate paid customization services.

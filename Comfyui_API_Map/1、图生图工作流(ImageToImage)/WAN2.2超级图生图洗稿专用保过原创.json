@@ -1,0 +1,442 @@
+{
+  "3": {
+    "inputs": {
+      "text": [
+        "75",
+        0
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "samples": [
+        "34",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "14": {
+    "inputs": {
+      "lora_name": "wan2.1\\WAN2.1_SmartphoneSnapshotPhotoReality_v1_by-AI_Characters.safetensors",
+      "strength_model": 0.7000000000000002,
+      "strength_clip": 0.7000000000000002,
+      "model": [
+        "29",
+        0
+      ],
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "29": {
+    "inputs": {
+      "lora_name": "Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.safetensors",
+      "strength_model": 0.4000000000000001,
+      "strength_clip": 0.4000000000000001,
+      "model": [
+        "30",
+        0
+      ],
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "30": {
+    "inputs": {
+      "lora_name": "wan2.1\\Wan2.1_T2V_14B_FusionX_LoRA.safetensors",
+      "strength_model": 0.4000000000000001,
+      "strength_clip": 0.4000000000000001,
+      "model": [
+        "42",
+        0
+      ],
+      "clip": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "34": {
+    "inputs": {
+      "seed": 202320558367537,
+      "steps": 20,
+      "cfg": 1,
+      "sampler_name": "res_2s",
+      "scheduler": "bong_tangent",
+      "denoise": 0.30000000000000004,
+      "model": [
+        "43",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "comfy-wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "40": {
+    "inputs": {
+      "clip_name": "wan2.1\\umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "42": {
+    "inputs": {
+      "unet_name": "Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "43": {
+    "inputs": {
+      "use_zero_init": true,
+      "zero_init_steps": 0,
+      "model": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "CFGZeroStarAndInit",
+    "_meta": {
+      "title": "CFG Zero Star/Init"
+    }
+  },
+  "45": {
+    "inputs": {
+      "model_name": "RealESRGAN_x2.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "加载放大模型"
+    }
+  },
+  "46": {
+    "inputs": {
+      "upscale_model": [
+        "45",
+        0
+      ],
+      "image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "使用模型放大图像"
+    }
+  },
+  "47": {
+    "inputs": {
+      "anything": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "72": {
+    "inputs": {
+      "image": "ComfyUI_00091_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "73": {
+    "inputs": {
+      "value": "72618cc4c7e2405ab41e9ba8a2f6b6a9.eskqvJ50dKMbxa3G"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "74": {
+    "inputs": {
+      "image": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "easy imageToBase64",
+    "_meta": {
+      "title": "Image To Base64"
+    }
+  },
+  "75": {
+    "inputs": {
+      "PreviewTextNode_0": "This is a photo of a woman standing on a pier. She has long blonde hair and is wearing a black hat with the word \"fishing\" written on it. Her top is a black crop top with sheer sleeves, revealing her midriff. She is also wearing black pants. In the background, there are boats docked at the pier and some greenery. The sky is clear and blue.\n\nThe woman's facial features suggest she might be of Asian descent, possibly Chinese. However, without more specific information, it's difficult to determine her exact identity or nationality.",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "text": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "PreviewTextNode",
+    "_meta": {
+      "title": "Preview Text Node"
+    }
+  },
+  "83": {
+    "inputs": {
+      "font_file": "Alibaba-PuHuiTi-Heavy.ttf",
+      "font_size": 40,
+      "border": 32,
+      "color_theme": "light",
+      "reel_1": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageReelComposit",
+    "_meta": {
+      "title": "LayerUtility: Image Reel Composit"
+    }
+  },
+  "84": {
+    "inputs": {
+      "image1_text": "原始图片",
+      "image2_text": "WAN洗搞出图效果",
+      "image3_text": "转为3D手办效果",
+      "image4_text": "123",
+      "reel_height": 1024,
+      "border": 32,
+      "image1": [
+        "72",
+        0
+      ],
+      "image2": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageReel",
+    "_meta": {
+      "title": "LayerUtility: Image Reel"
+    }
+  },
+  "85": {
+    "inputs": {
+      "images": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "86": {
+    "inputs": {
+      "pixels": [
+        "87",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "87": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "None",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "88": {
+    "inputs": {
+      "sage_attention": "auto",
+      "model": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "< Sage Attention"
+    }
+  },
+  "89": {
+    "inputs": {
+      "batch_size": 1,
+      "latent": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "CR Latent Batch Size",
+    "_meta": {
+      "title": "⚙️ CR Latent Batch Size"
+    }
+  },
+  "91": {
+    "inputs": {
+      "shift": 3.500000000000001,
+      "model": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "93": {
+    "inputs": {
+      "image_prompt_preset": "Flux描述",
+      "prompt_override": "Please provide a detailed description of this image. Special attention should be paid to recognizing whether the face is Chinese or foreign, and writing it clearly in the description. For example, if you recognize that it is a Chinese girl in the picture, you must emphasize that it is a Chinese girl in the prompt switch. Additionally, if you are familiar with any characters in the image, such as celebrities, movie characters, or animated characters, please use their names directly. The description should be as detailed as possible, but should not exceed 800 words.",
+      "model_name": "glm-4v-flash",
+      "api_key": [
+        "73",
+        0
+      ],
+      "seed": 1053613825513666,
+      "image_url": "",
+      "image_base64": [
+        "74",
+        0
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "GLM_Vision_ImageToPrompt",
+    "_meta": {
+      "title": "GLM识图生成提示词"
+    }
+  }
+}

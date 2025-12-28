@@ -1,0 +1,18 @@
+# ComfyUI 批量处理伴侣 (ComfyUI Batch Processing Companion)
+# Python 依赖包列表
+# 安装命令: pip install -r requirements.txt
+
+# GUI 框架
+ttkbootstrap>=1.10.0          # 现代化 Tkinter 主题框架
+Pillow>=9.0.0                 # 图像处理库
+tkinterdnd2>=0.3.0            # 拖拽功能支持
+
+# 网络请求
+requests>=2.28.0              # HTTP 请求库
+
+# Coze SDK (可选，用于 Coze 工作流集成)
+cozepy>=0.1.0                 # Coze API SDK
+
+# 注意: 以下为 Python 标准库，无需安装
+# tkinter, configparser, json, os, time, shutil, uuid
+# subprocess, threading, hashlib, hmac, base64, random, logging
