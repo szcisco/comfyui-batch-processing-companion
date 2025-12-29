@@ -26,7 +26,13 @@
 ComfyUI Batch Processing Companion is a desktop batch image generation tool designed specifically for ComfyUI users. It simplifies the ComfyUI API workflow through a visual interface, allowing users to perform batch image-to-image, text-to-image, and other AI drawing tasks without writing any code.
 
 ## 🎬 Demo Video
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1oavHBCEBp&page=1" width="800" height="450" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+https://github.com/user-attachments/assets/1d2b829a-63f5-4fe7-b755-d29314b81d5e
+
+<img width="2560" height="1358" alt="Screenshot5" src="https://github.com/user-attachments/assets/05aed2eb-955a-49eb-9dc4-7494f41adf52" />
+<img width="2560" height="1359" alt="Screenshot3" src="https://github.com/user-attachments/assets/2a830cb3-d501-4a35-a947-9d2a13b365bf" />
+
+
 
 ## Core Features
 
