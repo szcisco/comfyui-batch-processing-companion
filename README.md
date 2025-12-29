@@ -27,7 +27,7 @@ ComfyUI Batch Processing Companion is a desktop batch image generation tool desi
 
 ## Tool Demonstration
 <video width="800" height="450" controls>
-  <source src="https://github.com/szcisco/comfyui-batch-processing-companion/blob/main/batch_demo.mp4" type="video/mp4">
+  <source src="https://github.com/szcisco/comfyui-batch-processing-companion/batch_demo.mp4" type="video/mp4">
   请使用Chrome/Firefox/Edge浏览器查看视频演示！
 </video>
 
